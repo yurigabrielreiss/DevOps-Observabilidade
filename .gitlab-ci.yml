@@ -18,7 +18,7 @@ build_container_teste:
   
 deploy:
   needs:
-    - build
+    - build_container_teste
   stage: deploy
   before_script:
     - echo "Subindo container..."
