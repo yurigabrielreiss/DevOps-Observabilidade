@@ -4,14 +4,11 @@ from prometheus_client import Counter, generate_latest
 app = Flask(__name__)
 
 # Métrica para o Prometheus monitorar
-VOTOS = Counter('app_votos_total', 'Total de votos computados',
-['opcao'])
+VOTOS = Counter('app_votos_total', 'Total de votos computados', ['opcao'])
 
 @app.route('/')
 def home():
-    return "<h1>Sistema de Votação</h1><p>Vote acessando: <a
-href='/votar/a'>/votar/a</a> ou <a
-href='/votar/b'>/votar/b</a></p>"
+    return "<h1>Sistema de Votação</h1><p>Vote acessando: <a href='/votar/a'>/votar/a</a> ou <a href='/votar/b'>/votar/b</a></p>"
 
 @app.route('/votar/<opcao>')
 def votar(opcao):
