@@ -12,7 +12,7 @@ build_container_teste:
   before_script:
     - echo "Iniciando teste..."
   script:
-    - docker build -t app-votacao:1.0
+    - docker build -t app-votacao:1.0 .
   after_script:
     - echo "Container construído com sucesso!"
   
