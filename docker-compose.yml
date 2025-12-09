@@ -20,7 +20,6 @@ services:
     networks:
       - monitor-net
 
-
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
